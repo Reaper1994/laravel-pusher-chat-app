@@ -1,2 +1,39 @@
 # laravel-pusher-chat-app
-"Simple Chat App built with Laravel and Pusher: A lightweight and efficient solution for implementing real-time chat functionality in web applications using Laravel framework and Pusher for seamless communication.
+## Requirements
+
+- PHP v8.1
+- Composer v2.5.5
+- Web Server (HTTPS)
+
+## Setup
+
+- `composer require pusher/pusher-php-server`
+
+## Code
+
+- `app/Http/Controllers/PusherController.php`
+    - index()
+    - broadcast()
+    - receive()
+
+
+- `app/Events/PusherBroadcast.php`
+
+
+## www.pusher.com
+
+- Create Account
+- Create App
+- Copy API Keys
+
+## Env
+
+Copy `.env.example` and name `.env` and populate the following API keys
+
+- `BROADCAST_DRIVER`
+
+
+- `PUSHER_APP_ID`
+- `PUSHER_APP_KEY`
+- `PUSHER_APP_SECRET`
+- `PUSHER_APP_CLUSTER`
