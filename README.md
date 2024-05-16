@@ -38,3 +38,6 @@ Copy `.env.example` and name `.env` and populate the following API keys
 - `PUSHER_APP_KEY`
 - `PUSHER_APP_SECRET`
 - `PUSHER_APP_CLUSTER`
+
+# NPM packages used
+ heroicons-react command - npm install heroicons-react
