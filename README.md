@@ -1,8 +1,9 @@
 # laravel-pusher-chat-app
 ## Requirements
 
-- PHP v8.1
-- Composer v2.5.5
+- PHP v8.3
+- Composer v2.7.4
+- Laravel version used 11
 - Web Server (HTTPS)
 
 ## Setup
