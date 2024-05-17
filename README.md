@@ -1,24 +1,19 @@
 # laravel-pusher-chat-app
+A Laravel Pusher Chat App is a straightforward messaging application built with Laravel and Pusher. It enables users to exchange messages, reply to specific messages, delete sent messages,  track has last seen status, and display read receipts with ticks indicating when messages are read by the recipient...
+
+
 ## Requirements
 
 - PHP v8.3
 - Composer v2.7.4
-- Laravel version used 11
-- Web Server (HTTPS)
+- Mysql
+- Pusher
+- React
+- Scout (Mellisearch)
 
 ## Setup
 
 - `composer require pusher/pusher-php-server`
-
-## Code
-
-- `app/Http/Controllers/PusherController.php`
-    - index()
-    - broadcast()
-    - receive()
-
-
-- `app/Events/PusherBroadcast.php`
 
 
 ## www.pusher.com
@@ -31,13 +26,12 @@
 
 Copy `.env.example` and name `.env` and populate the following API keys
 
-- `BROADCAST_DRIVER`
-
-
+- `BROADCAST_DRIVER`=pusher
 - `PUSHER_APP_ID`
 - `PUSHER_APP_KEY`
 - `PUSHER_APP_SECRET`
 - `PUSHER_APP_CLUSTER`
 
 # NPM packages used
- heroicons-react command - npm install heroicons-react
+ Laravel echo
+ hero icons-react command - npm install hero icons-react
