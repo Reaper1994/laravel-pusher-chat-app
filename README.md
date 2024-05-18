@@ -16,7 +16,9 @@ A Laravel Pusher Chat App is a straightforward messaging application built with 
 
 ## Setup
 
-- `composer require pusher/pusher-php-server`
+1. Run `composer install` to install the PHP dependencies.
+2. Run `npm install` to install the Node.js dependencies.
+3. Run `php artisan migrate:fresh --seed` to migrate the database and seed it with data.
 
 
 ## www.pusher.com
@@ -25,16 +27,34 @@ A Laravel Pusher Chat App is a straightforward messaging application built with 
 - Create App
 - Copy API Keys
 
-## Env
+## Environment Configuration
 
-Copy `.env.example` and name `.env` and populate the following API keys
+1. Copy the `.env.example` file and rename it to `.env`.
+2. Populate the following API keys in the `.env` file:
 
-- `BROADCAST_DRIVER`=pusher
-- `PUSHER_APP_ID`
-- `PUSHER_APP_KEY`
-- `PUSHER_APP_SECRET`
-- `PUSHER_APP_CLUSTER`
+    - `SCOUT_DRIVER=meilisearch`
+      
+    - `BROADCAST_DRIVER=pusher`
+    - `PUSHER_APP_ID`
+    - `PUSHER_APP_KEY`
+    - `PUSHER_APP_SECRET`
+    - `PUSHER_APP_CLUSTER`
+
+3. Additionally, for client-side environment variables, update your `.env` file as follows:
+
+    ```plaintext
+    VITE_APP_NAME="${APP_NAME}"
+    VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+    VITE_PUSHER_HOST="${PUSHER_HOST}"
+    VITE_PUSHER_PORT="${PUSHER_PORT}"
+    VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
+    VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+    ```
+
+    These variables will be used in your client-side code, so make sure to replace `${...}` placeholders with actual values.
 
 # NPM packages used
  Laravel echo
- hero icons-react command - npm install hero icons-react
+ hero icons-react 
+
+Done by Osmar Rodrigues - @Reaper1994
