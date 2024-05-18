@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\PusherController;
+use App\Http\Controllers\MessageController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -24,11 +24,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/chat', [PusherController::class, 'index'])->name('chat.index');
-    Route::get('/chat/{user:uuid}', [PusherController::class, 'show'])->name('chat.show');
-    Route::post('/chat/{user:uuid}', [PusherController::class, 'chat'])->name('chat.store');
+    Route::get('/chat', [MessageController::class, 'index'])->name('chat.index');
+    Route::get('/chat/{user:uuid}', [MessageController::class, 'show'])->name('chat.show');
+    Route::post('/chat/{user:uuid}', [MessageController::class, 'chat'])->name('chat.store');
 
-    Route::delete('/chat/delete/{chat}', [PusherController::class, 'destroy'])->name('chat.destroy');
+    Route::delete('/chat/delete/{chat}', [MessageController::class, 'destroy'])->name('chat.destroy');
 });
 
 require __DIR__.'/auth.php';
