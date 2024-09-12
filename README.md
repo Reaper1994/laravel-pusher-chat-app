@@ -1,7 +1,8 @@
 # laravel-pusher-chat-app
 A Laravel Pusher Chat App is a straightforward messaging application built with Laravel and Pusher. It enables users to exchange messages, reply to specific messages, delete sent messages,  track has last seen status, and display read receipts with ticks indicating when messages are read by the recipient...
 
-![Animation-2](https://github.com/Reaper1994/laravel-pusher-chat-app/assets/23649642/894589ed-590e-4a99-a5fb-6d0d27116995)
+[Animation-2](https://github.com/user-attachments/assets/cca0c522-6003-4785-8e0c-e9f2829983cc)
+
 
 
 ## Requirements
